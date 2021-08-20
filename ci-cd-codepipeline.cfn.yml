@@ -346,7 +346,7 @@ Resources:
                 Branch: !Ref GitBranch
                 OAuthToken: !Ref GitHubToken
               OutputArtifacts:
-                - Name: App
+                - Name: SourceArtifacts
               RunOrder: 1
         - Name: Build
           Actions:
@@ -359,7 +359,7 @@ Resources:
               Configuration:
                 ProjectName: !Ref CodeBuildProject
               InputArtifacts:
-                - Name: App
+                - Name: SourceWrong
               OutputArtifacts:
                 - Name: BuildOutput
               RunOrder: 1
