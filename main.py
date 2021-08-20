@@ -65,7 +65,7 @@ def health():
 @APP.route('/auth', methods=['POST'])
 def auth():
     """
-    Create JWT token based on email..
+    Create JWT token based on email.
     """
     request_data = request.get_json()
     email = request_data.get('email')
